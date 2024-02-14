@@ -1,0 +1,199 @@
+# Group 1
+# Row 1
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-3a
+spec:
+  type: team
+  profile:
+    displayName: group-3a
+  children: [group-3b, group-3c]
+  members:
+    - group-3b
+    - group-3c
+---
+# Row 2
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-3b
+spec:
+  type: team
+  profile:
+    displayName: group-3b
+  children: [group-3d, group-3d]
+  parent: group-3a
+  members:
+    - group-3d
+    - group-3e
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-3c
+spec:
+  type: team
+  profile:
+    displayName: group-3c
+  children: [group-3f, group-3g]
+  parent: group-3a
+  members:
+    - group-3f
+    - group-3g
+---
+# Row 3
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-3d
+spec:
+  type: team
+  profile:
+    displayName: group-3d
+  children: [group-3h, group-3i]
+  parent: group-3b
+  members:
+    - group-3h
+    - group-3i
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-3e
+spec:
+  type: team
+  profile:
+    displayName: group-3e
+  children: [group-3j]
+  parent: group-3b
+  members:
+    - group-3j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-3f
+spec:
+  type: team
+  profile:
+    displayName: group-3f
+  children: [group-3k]
+  parent: group-3c
+  members:
+    - group-3f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-3g
+spec:
+  type: team
+  profile:
+    displayName: group-3g
+  children: [group-3l, group-3m]
+  parent: group-3c
+  members:
+    - group-3l
+    - group-3m
+---
+# Row 3
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-3h
+spec:
+  type: team
+  profile:
+    displayName: group-3h
+  children: []
+  parent: group-3d
+  members:
+    - 3a
+    - 3b
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-3i
+spec:
+  type: team
+  profile:
+    displayName: group-3i
+  children: []
+  parent: group-3d
+  members:
+    - 3c
+    - 3d
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-3j
+spec:
+  type: team
+  profile:
+    displayName: group-3j
+  children: []
+  parents: group-3e
+  members:
+    - 3e
+    - 3f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-3k
+spec:
+  type: team
+  profile:
+    displayName: group-3k
+  children: []
+  parent: group-3f
+  members:
+    - 3g
+    - 3h
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-3l
+spec:
+  type: team
+  profile:
+    displayName: group-3l
+  children: []
+  parent: group-3g
+  members:
+    - 3i
+    - 3j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-3m
+spec:
+  type: team
+  profile:
+    displayName: group-3m
+  children: []
+  parent: group-3g
+  members:
+    - 3k
+    - 3l
+    - 3m
+---
+

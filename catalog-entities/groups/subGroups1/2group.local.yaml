@@ -1,0 +1,187 @@
+# Group 1
+# Row 1
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-12a
+spec:
+  type: team
+  profile:
+    displayName: group-12a
+  children: [group-12b, group-12c]
+  members:
+    - group-12b
+    - group-12c
+---
+# Row 12
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-12b
+spec:
+  type: team
+  profile:
+    displayName: group-12b
+  children: [group-12d, group-12d]
+  members:
+    - group-12d
+    - group-12e
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-12c
+spec:
+  type: team
+  profile:
+    displayName: group-12c
+  children: [group-12f, group-12g]
+  members:
+    - group-12f
+    - group-12g
+---
+# Row 3
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-12d
+spec:
+  type: team
+  profile:
+    displayName: group-12d
+  children: [group-12h, group-12i]
+  members:
+    - group-12h
+    - group-12i
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-12e
+spec:
+  type: team
+  profile:
+    displayName: group-12e
+  children: [group-12j]
+  members:
+    - group-12j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-12f
+spec:
+  type: team
+  profile:
+    displayName: group-12f
+  children: [group-12k]
+  members:
+    - group-12f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-12g
+spec:
+  type: team
+  profile:
+    displayName: group-12g
+  children: [group-12l, group-12m]
+  members:
+    - group-12l
+    - group-12m
+---
+# Row 4
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-12h
+spec:
+  type: team
+  profile:
+    displayName: group-12h
+  children: []
+  members:
+    - 12a
+    - 12b
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-12i
+spec:
+  type: team
+  profile:
+    displayName: group-12i
+  children: []
+  members:
+    - 12c
+    - 12d
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-12j
+spec:
+  type: team
+  profile:
+    displayName: group-12j
+  children: []
+  members:
+    - 12e
+    - 12f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-12k
+spec:
+  type: team
+  profile:
+    displayName: group-12k
+  children: []
+  members:
+    - 12g
+    - 12h
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-12l
+spec:
+  type: team
+  profile:
+    displayName: group-12l
+  children: []
+  members:
+    - 12i
+    - 12j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-12m
+spec:
+  type: team
+  profile:
+    displayName: group-12m
+  children: []
+  members:
+    - 12k
+    - 12l
+    - 12m
+---
+

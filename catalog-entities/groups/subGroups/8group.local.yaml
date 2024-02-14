@@ -1,0 +1,187 @@
+# Group 1
+# Row 1
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-8a
+spec:
+  type: team
+  profile:
+    displayName: group-8a
+  children: [group-8b, group-8c]
+  members:
+    - group-8b
+    - group-8c
+---
+# Row 2
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-8b
+spec:
+  type: team
+  profile:
+    displayName: group-8b
+  children: [group-8d, group-8d]
+  members:
+    - group-8d
+    - group-8e
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-8c
+spec:
+  type: team
+  profile:
+    displayName: group-8c
+  children: [group-8f, group-8g]
+  members:
+    - group-8f
+    - group-8g
+---
+# Row 8
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-8d
+spec:
+  type: team
+  profile:
+    displayName: group-8d
+  children: [group-8h, group-8i]
+  members:
+    - group-8h
+    - group-8i
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-8e
+spec:
+  type: team
+  profile:
+    displayName: group-8e
+  children: [group-8j]
+  members:
+    - group-8j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-8f
+spec:
+  type: team
+  profile:
+    displayName: group-8f
+  children: [group-8k]
+  members:
+    - group-8f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-8g
+spec:
+  type: team
+  profile:
+    displayName: group-8g
+  children: [group-8l, group-8m]
+  members:
+    - group-8l
+    - group-8m
+---
+# Row 8
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-8h
+spec:
+  type: team
+  profile:
+    displayName: group-8h
+  children: []
+  members:
+    - 8a
+    - 8b
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-8i
+spec:
+  type: team
+  profile:
+    displayName: group-8i
+  children: []
+  members:
+    - 8c
+    - 8d
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-8j
+spec:
+  type: team
+  profile:
+    displayName: group-8j
+  children: []
+  members:
+    - 8e
+    - 8f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-8k
+spec:
+  type: team
+  profile:
+    displayName: group-8k
+  children: []
+  members:
+    - 8g
+    - 8h
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-8l
+spec:
+  type: team
+  profile:
+    displayName: group-8l
+  children: []
+  members:
+    - 8i
+    - 8j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-8m
+spec:
+  type: team
+  profile:
+    displayName: group-8m
+  children: []
+  members:
+    - 8k
+    - 8l
+    - 8m
+---
+

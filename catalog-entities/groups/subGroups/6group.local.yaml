@@ -1,0 +1,187 @@
+# Group 1
+# Row 1
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-6a
+spec:
+  type: team
+  profile:
+    displayName: group-6a
+  children: [group-6b, group-6c]
+  members:
+    - group-6b
+    - group-6c
+---
+# Row 6
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-6b
+spec:
+  type: team
+  profile:
+    displayName: group-6b
+  children: [group-6d, group-6d]
+  members:
+    - group-6d
+    - group-6e
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-6c
+spec:
+  type: team
+  profile:
+    displayName: group-6c
+  children: [group-6f, group-6g]
+  members:
+    - group-6f
+    - group-6g
+---
+# Row 3
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-6d
+spec:
+  type: team
+  profile:
+    displayName: group-6d
+  children: [group-6h, group-6i]
+  members:
+    - group-6h
+    - group-6i
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-6e
+spec:
+  type: team
+  profile:
+    displayName: group-6e
+  children: [group-6j]
+  members:
+    - group-6j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-6f
+spec:
+  type: team
+  profile:
+    displayName: group-6f
+  children: [group-6k]
+  members:
+    - group-6f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-6g
+spec:
+  type: team
+  profile:
+    displayName: group-6g
+  children: [group-6l, group-6m]
+  members:
+    - group-6l
+    - group-6m
+---
+# Row 4
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-6h
+spec:
+  type: team
+  profile:
+    displayName: group-6h
+  children: []
+  members:
+    - 6a
+    - 6b
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-6i
+spec:
+  type: team
+  profile:
+    displayName: group-6i
+  children: []
+  members:
+    - 6c
+    - 6d
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-6j
+spec:
+  type: team
+  profile:
+    displayName: group-6j
+  children: []
+  members:
+    - 6e
+    - 6f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-6k
+spec:
+  type: team
+  profile:
+    displayName: group-6k
+  children: []
+  members:
+    - 6g
+    - 6h
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-6l
+spec:
+  type: team
+  profile:
+    displayName: group-6l
+  children: []
+  members:
+    - 6i
+    - 6j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-6m
+spec:
+  type: team
+  profile:
+    displayName: group-6m
+  children: []
+  members:
+    - 6k
+    - 6l
+    - 6m
+---
+

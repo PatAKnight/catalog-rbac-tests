@@ -1,0 +1,118 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 3a
+spec:
+  memberOf:
+    - group-3h
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 3b
+spec:
+  memberOf:
+    - group-3h
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 3c
+spec:
+  memberOf:
+    - group-3i
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 3d
+spec:
+  memberOf:
+    - group-3i
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 3e
+spec:
+  memberOf:
+    - group-3j
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 3f
+spec:
+  memberOf:
+    - group-3j
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 3g
+spec:
+  memberOf:
+    - group-3k
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 3h
+spec:
+  memberOf:
+    - group-3k
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 3i
+spec:
+  memberOf:
+    - group-3l
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 3j
+spec:
+  memberOf:
+    - group-3l
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 3k
+spec:
+  memberOf:
+    - group-3m
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 3l
+spec:
+  memberOf:
+    - group-3m
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 3m
+spec:
+  memberOf:
+    - group-3m
+---
+

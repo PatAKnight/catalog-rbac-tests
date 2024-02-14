@@ -1,0 +1,187 @@
+# Group 1
+# Row 1
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-5a
+spec:
+  type: team
+  profile:
+    displayName: group-5a
+  children: [group-5b, group-5c]
+  members:
+    - group-5b
+    - group-5c
+---
+# Row 2
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-5b
+spec:
+  type: team
+  profile:
+    displayName: group-5b
+  children: [group-5d, group-5d]
+  members:
+    - group-5d
+    - group-5e
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-5c
+spec:
+  type: team
+  profile:
+    displayName: group-5c
+  children: [group-5f, group-5g]
+  members:
+    - group-5f
+    - group-5g
+---
+# Row 5
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-5d
+spec:
+  type: team
+  profile:
+    displayName: group-5d
+  children: [group-5h, group-5i]
+  members:
+    - group-5h
+    - group-5i
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-5e
+spec:
+  type: team
+  profile:
+    displayName: group-5e
+  children: [group-5j]
+  members:
+    - group-5j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-5f
+spec:
+  type: team
+  profile:
+    displayName: group-5f
+  children: [group-5k]
+  members:
+    - group-5f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-5g
+spec:
+  type: team
+  profile:
+    displayName: group-5g
+  children: [group-5l, group-5m]
+  members:
+    - group-5l
+    - group-5m
+---
+# Row 5
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-5h
+spec:
+  type: team
+  profile:
+    displayName: group-5h
+  children: []
+  members:
+    - 5a
+    - 5b
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-5i
+spec:
+  type: team
+  profile:
+    displayName: group-5i
+  children: []
+  members:
+    - 5c
+    - 5d
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-5j
+spec:
+  type: team
+  profile:
+    displayName: group-5j
+  children: []
+  members:
+    - 5e
+    - 5f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-5k
+spec:
+  type: team
+  profile:
+    displayName: group-5k
+  children: []
+  members:
+    - 5g
+    - 5h
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-5l
+spec:
+  type: team
+  profile:
+    displayName: group-5l
+  children: []
+  members:
+    - 5i
+    - 5j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-5m
+spec:
+  type: team
+  profile:
+    displayName: group-5m
+  children: []
+  members:
+    - 5k
+    - 5l
+    - 5m
+---
+

@@ -1,0 +1,187 @@
+# Group 1
+# Row 1
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-14a
+spec:
+  type: team
+  profile:
+    displayName: group-14a
+  children: [group-14b, group-14c]
+  members:
+    - group-14b
+    - group-14c
+---
+# Row 2
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-14b
+spec:
+  type: team
+  profile:
+    displayName: group-14b
+  children: [group-14d, group-14d]
+  members:
+    - group-14d
+    - group-14e
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-14c
+spec:
+  type: team
+  profile:
+    displayName: group-14c
+  children: [group-14f, group-14g]
+  members:
+    - group-14f
+    - group-14g
+---
+# Row 14
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-14d
+spec:
+  type: team
+  profile:
+    displayName: group-14d
+  children: [group-14h, group-14i]
+  members:
+    - group-14h
+    - group-14i
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-14e
+spec:
+  type: team
+  profile:
+    displayName: group-14e
+  children: [group-14j]
+  members:
+    - group-14j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-14f
+spec:
+  type: team
+  profile:
+    displayName: group-14f
+  children: [group-14k]
+  members:
+    - group-14f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-14g
+spec:
+  type: team
+  profile:
+    displayName: group-14g
+  children: [group-14l, group-14m]
+  members:
+    - group-14l
+    - group-14m
+---
+# Row 14
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-14h
+spec:
+  type: team
+  profile:
+    displayName: group-14h
+  children: []
+  members:
+    - 14a
+    - 14b
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-14i
+spec:
+  type: team
+  profile:
+    displayName: group-14i
+  children: []
+  members:
+    - 14c
+    - 14d
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-14j
+spec:
+  type: team
+  profile:
+    displayName: group-14j
+  children: []
+  members:
+    - 14e
+    - 14f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-14k
+spec:
+  type: team
+  profile:
+    displayName: group-14k
+  children: []
+  members:
+    - 14g
+    - 14h
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-14l
+spec:
+  type: team
+  profile:
+    displayName: group-14l
+  children: []
+  members:
+    - 14i
+    - 14j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-14m
+spec:
+  type: team
+  profile:
+    displayName: group-14m
+  children: []
+  members:
+    - 14k
+    - 14l
+    - 14m
+---
+

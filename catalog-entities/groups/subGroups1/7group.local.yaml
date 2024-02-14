@@ -1,0 +1,187 @@
+# Group 1
+# Row 1
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-17a
+spec:
+  type: team
+  profile:
+    displayName: group-17a
+  children: [group-17b, group-17c]
+  members:
+    - group-17b
+    - group-17c
+---
+# Row 2
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-17b
+spec:
+  type: team
+  profile:
+    displayName: group-17b
+  children: [group-17d, group-17d]
+  members:
+    - group-17d
+    - group-17e
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-17c
+spec:
+  type: team
+  profile:
+    displayName: group-17c
+  children: [group-17f, group-17g]
+  members:
+    - group-17f
+    - group-17g
+---
+# Row 17
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-17d
+spec:
+  type: team
+  profile:
+    displayName: group-17d
+  children: [group-17h, group-17i]
+  members:
+    - group-17h
+    - group-17i
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-17e
+spec:
+  type: team
+  profile:
+    displayName: group-17e
+  children: [group-17j]
+  members:
+    - group-17j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-17f
+spec:
+  type: team
+  profile:
+    displayName: group-17f
+  children: [group-17k]
+  members:
+    - group-17f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-17g
+spec:
+  type: team
+  profile:
+    displayName: group-17g
+  children: [group-17l, group-17m]
+  members:
+    - group-17l
+    - group-17m
+---
+# Row 4
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-17h
+spec:
+  type: team
+  profile:
+    displayName: group-17h
+  children: []
+  members:
+    - 17a
+    - 17b
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-17i
+spec:
+  type: team
+  profile:
+    displayName: group-17i
+  children: []
+  members:
+    - 17c
+    - 17d
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-17j
+spec:
+  type: team
+  profile:
+    displayName: group-17j
+  children: []
+  members:
+    - 17e
+    - 17f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-17k
+spec:
+  type: team
+  profile:
+    displayName: group-17k
+  children: []
+  members:
+    - 17g
+    - 17h
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-17l
+spec:
+  type: team
+  profile:
+    displayName: group-17l
+  children: []
+  members:
+    - 17i
+    - 17j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-17m
+spec:
+  type: team
+  profile:
+    displayName: group-17m
+  children: []
+  members:
+    - 17k
+    - 17l
+    - 17m
+---
+

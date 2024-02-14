@@ -1,0 +1,118 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 6a
+spec:
+  memberOf:
+    - group-6h
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 6b
+spec:
+  memberOf:
+    - group-6h
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 6c
+spec:
+  memberOf:
+    - group-6i
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 6d
+spec:
+  memberOf:
+    - group-6i
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 6e
+spec:
+  memberOf:
+    - group-6j
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 6f
+spec:
+  memberOf:
+    - group-6j
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 6g
+spec:
+  memberOf:
+    - group-6k
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 6h
+spec:
+  memberOf:
+    - group-6k
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 6i
+spec:
+  memberOf:
+    - group-6l
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 6j
+spec:
+  memberOf:
+    - group-6l
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 6k
+spec:
+  memberOf:
+    - group-6m
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 6l
+spec:
+  memberOf:
+    - group-6m
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: 6m
+spec:
+  memberOf:
+    - group-6m
+---
+

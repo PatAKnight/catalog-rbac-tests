@@ -1,0 +1,187 @@
+# Group 1
+# Row 1
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-7a
+spec:
+  type: team
+  profile:
+    displayName: group-7a
+  children: [group-7b, group-7c]
+  members:
+    - group-7b
+    - group-7c
+---
+# Row 2
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-7b
+spec:
+  type: team
+  profile:
+    displayName: group-7b
+  children: [group-7d, group-7d]
+  members:
+    - group-7d
+    - group-7e
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-7c
+spec:
+  type: team
+  profile:
+    displayName: group-7c
+  children: [group-7f, group-7g]
+  members:
+    - group-7f
+    - group-7g
+---
+# Row 7
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-7d
+spec:
+  type: team
+  profile:
+    displayName: group-7d
+  children: [group-7h, group-7i]
+  members:
+    - group-7h
+    - group-7i
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-7e
+spec:
+  type: team
+  profile:
+    displayName: group-7e
+  children: [group-7j]
+  members:
+    - group-7j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-7f
+spec:
+  type: team
+  profile:
+    displayName: group-7f
+  children: [group-7k]
+  members:
+    - group-7f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-7g
+spec:
+  type: team
+  profile:
+    displayName: group-7g
+  children: [group-7l, group-7m]
+  members:
+    - group-7l
+    - group-7m
+---
+# Row 4
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-7h
+spec:
+  type: team
+  profile:
+    displayName: group-7h
+  children: []
+  members:
+    - 7a
+    - 7b
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-7i
+spec:
+  type: team
+  profile:
+    displayName: group-7i
+  children: []
+  members:
+    - 7c
+    - 7d
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-7j
+spec:
+  type: team
+  profile:
+    displayName: group-7j
+  children: []
+  members:
+    - 7e
+    - 7f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-7k
+spec:
+  type: team
+  profile:
+    displayName: group-7k
+  children: []
+  members:
+    - 7g
+    - 7h
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-7l
+spec:
+  type: team
+  profile:
+    displayName: group-7l
+  children: []
+  members:
+    - 7i
+    - 7j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-7m
+spec:
+  type: team
+  profile:
+    displayName: group-7m
+  children: []
+  members:
+    - 7k
+    - 7l
+    - 7m
+---
+

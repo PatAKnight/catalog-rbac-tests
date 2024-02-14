@@ -1,0 +1,187 @@
+# Group 1
+# Row 1
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-11a
+spec:
+  type: team
+  profile:
+    displayName: group-11a
+  children: [group-11b, group-11c]
+  members:
+    - group-11b
+    - group-11c
+---
+# Row 2
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-11b
+spec:
+  type: team
+  profile:
+    displayName: group-11b
+  children: [group-11d, group-11d]
+  members:
+    - group-11d
+    - group-11e
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-11c
+spec:
+  type: team
+  profile:
+    displayName: group-11c
+  children: [group-11f, group-11g]
+  members:
+    - group-11f
+    - group-11g
+---
+# Row 3
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-11d
+spec:
+  type: team
+  profile:
+    displayName: group-11d
+  children: [group-11h, group-11i]
+  members:
+    - group-11h
+    - group-11i
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-11e
+spec:
+  type: team
+  profile:
+    displayName: group-11e
+  children: [group-11j]
+  members:
+    - group-11j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-11f
+spec:
+  type: team
+  profile:
+    displayName: group-11f
+  children: [group-11k]
+  members:
+    - group-11f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-11g
+spec:
+  type: team
+  profile:
+    displayName: group-11g
+  children: [group-11l, group-11m]
+  members:
+    - group-11l
+    - group-11m
+---
+# Row 4
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-11h
+spec:
+  type: team
+  profile:
+    displayName: group-11h
+  children: []
+  members:
+    - 11a
+    - 11b
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-11i
+spec:
+  type: team
+  profile:
+    displayName: group-11i
+  children: []
+  members:
+    - 11c
+    - 11d
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-11j
+spec:
+  type: team
+  profile:
+    displayName: group-11j
+  children: []
+  members:
+    - 11e
+    - 11f
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-11k
+spec:
+  type: team
+  profile:
+    displayName: group-11k
+  children: []
+  members:
+    - 11g
+    - 11h
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-11l
+spec:
+  type: team
+  profile:
+    displayName: group-11l
+  children: []
+  members:
+    - 11i
+    - 11j
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  namespace: default
+  name: group-11m
+spec:
+  type: team
+  profile:
+    displayName: group-11m
+  children: []
+  members:
+    - 11k
+    - 11l
+    - 11m
+---
+
