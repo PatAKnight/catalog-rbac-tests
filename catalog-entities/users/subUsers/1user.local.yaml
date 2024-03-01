@@ -110,7 +110,7 @@ apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
   namespace: default
-  name: <your-username>
+  name: pataknight
 spec:
   memberOf:
     - group-1m

@@ -13,27 +13,27 @@ spec:
     - ./groups/subGroups/2group.local.yaml
     - ./groups/subGroups/3group.local.yaml
     - ./groups/subGroups/4group.local.yaml
-    # - ./users/subUsers/5user.local.yaml
-    # - ./users/subUsers/6user.local.yaml
-    # - ./users/subUsers/7user.local.yaml
-    # - ./users/subUsers/8user.local.yaml
-    # - ./groups/subGroups/5group.local.yaml
-    # - ./groups/subGroups/6group.local.yaml
-    # - ./groups/subGroups/7group.local.yaml
-    # - ./groups/subGroups/8group.local.yaml
-    # - ./users/subUsers1/1user.local.yaml
-    # - ./users/subUsers1/2user.local.yaml
-    # - ./users/subUsers1/3user.local.yaml
-    # - ./users/subUsers1/4user.local.yaml
-    # - ./groups/subGroups1/1group.local.yaml
-    # - ./groups/subGroups1/2group.local.yaml
-    # - ./groups/subGroups1/3group.local.yaml
-    # - ./groups/subGroups1/4group.local.yaml
-    # - ./users/subUsers1/5user.local.yaml
-    # - ./users/subUsers1/6user.local.yaml
-    # - ./users/subUsers1/7user.local.yaml
-    # - ./users/subUsers1/8user.local.yaml
-    # - ./groups/subGroups1/5group.local.yaml
-    # - ./groups/subGroups1/6group.local.yaml
-    # - ./groups/subGroups1/7group.local.yaml
-    # - ./groups/subGroups1/8group.local.yaml
+    - ./users/subUsers/5user.local.yaml
+    - ./users/subUsers/6user.local.yaml
+    - ./users/subUsers/7user.local.yaml
+    - ./users/subUsers/8user.local.yaml
+    - ./groups/subGroups/5group.local.yaml
+    - ./groups/subGroups/6group.local.yaml
+    - ./groups/subGroups/7group.local.yaml
+    - ./groups/subGroups/8group.local.yaml
+    - ./users/subUsers1/1user.local.yaml
+    - ./users/subUsers1/2user.local.yaml
+    - ./users/subUsers1/3user.local.yaml
+    - ./users/subUsers1/4user.local.yaml
+    - ./groups/subGroups1/1group.local.yaml
+    - ./groups/subGroups1/2group.local.yaml
+    - ./groups/subGroups1/3group.local.yaml
+    - ./groups/subGroups1/4group.local.yaml
+    - ./users/subUsers1/5user.local.yaml
+    - ./users/subUsers1/6user.local.yaml
+    - ./users/subUsers1/7user.local.yaml
+    - ./users/subUsers1/8user.local.yaml
+    - ./groups/subGroups1/5group.local.yaml
+    - ./groups/subGroups1/6group.local.yaml
+    - ./groups/subGroups1/7group.local.yaml
+    - ./groups/subGroups1/8group.local.yaml
