@@ -115,12 +115,4 @@ spec:
   memberOf:
     - group-1m
 ---
-apiVersion: backstage.io/v1alpha1
-kind: User
-metadata:
-  namespace: default
-  name: pknight
-spec:
-  memberOf:
-    - group-1m
----
+
