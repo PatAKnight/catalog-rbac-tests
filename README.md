@@ -1,6 +1,6 @@
 # CATALOG-RBAC-TESTS
 
-Search and replace `<your-username>` with your username
+Search and replace `<YOUR_USER_NAME>` with your username
 
 Edit `./catalog-entities/all.local.yaml` to select the number of users and groups that you wish to load into your backstage instance
 

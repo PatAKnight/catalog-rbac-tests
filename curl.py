@@ -21,8 +21,8 @@ for i in range(NUM_REQUESTS_TWO):
         total_time_inner += elapsed_time_inner
     
     average_time_inner = total_time_inner / NUM_REQUESTS
-    print(f"Average time taken to complete 15 requests: {average_time_inner:.3f} seconds")
-    print(f"Total time it took to complete 15 requests: {total_time_inner:.3f} seconds")
+    print(f"Average time taken to complete 1 request: {average_time_inner:.3f} seconds")
+    print(f"Total time it took to complete {NUM_REQUESTS} requests: {total_time_inner:.3f} seconds")
     total_time += total_time_inner
 
 average_time = total_time / NUM_REQUESTS_TWO

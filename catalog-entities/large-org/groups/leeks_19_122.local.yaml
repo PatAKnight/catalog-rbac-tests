@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: leeks_19_122
+  title: Leeks 19 122
+spec:
+  children: []
+  parent: zucchinis_10_122
+  type: team

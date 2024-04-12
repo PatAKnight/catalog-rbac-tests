@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: gourds_3_155
+  title: Gourds 3 155
+spec:
+  children: []
+  parent: potatoes_0_155
+  type: team

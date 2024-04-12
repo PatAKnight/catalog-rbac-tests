@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: watermelon_444
+spec:
+  memberOf:
+  - parsnips_6_28
+  profile:
+    displayName: Watermelon 444
+    email: watermelon-444@example.com

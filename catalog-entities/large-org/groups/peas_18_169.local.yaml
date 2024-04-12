@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: peas_18_169
+  title: Peas 18 169
+spec:
+  children: []
+  parent: cucumbers_7_169
+  type: team

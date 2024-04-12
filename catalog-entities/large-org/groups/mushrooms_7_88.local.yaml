@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: mushrooms_7_88
+  title: Mushrooms 7 88
+spec:
+  children: []
+  parent: leeks_4_88
+  type: team

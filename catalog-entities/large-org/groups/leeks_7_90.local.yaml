@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: leeks_7_90
+  title: Leeks 7 90
+spec:
+  children: []
+  parent: pumpkins_0_90
+  type: team

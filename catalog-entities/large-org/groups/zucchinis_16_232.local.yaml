@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: zucchinis_16_232
+  title: Zucchinis 16 232
+spec:
+  children: []
+  parent: turnips_1_232
+  type: team

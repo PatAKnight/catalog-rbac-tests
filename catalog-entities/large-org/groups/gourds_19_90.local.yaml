@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: gourds_19_90
+  title: Gourds 19 90
+spec:
+  children: []
+  parent: cucumbers_13_90
+  type: team

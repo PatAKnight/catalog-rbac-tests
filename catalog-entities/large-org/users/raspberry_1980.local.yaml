@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: raspberry_1980
+spec:
+  memberOf:
+  - tomatoes_5_149
+  profile:
+    displayName: Raspberry 1980
+    email: raspberry-1980@example.com

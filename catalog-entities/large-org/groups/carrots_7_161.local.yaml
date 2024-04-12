@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: carrots_7_161
+  title: Carrots 7 161
+spec:
+  children: []
+  parent: peppers_5_161
+  type: team

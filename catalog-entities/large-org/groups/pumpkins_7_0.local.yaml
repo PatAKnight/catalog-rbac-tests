@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: pumpkins_7_0
+  title: Pumpkins 7 0
+spec:
+  children: []
+  parent: cucumbers_4_0
+  type: team

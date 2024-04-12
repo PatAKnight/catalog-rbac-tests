@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: blackberry_1450
+spec:
+  memberOf:
+  - zucchinis_3_105
+  profile:
+    displayName: Blackberry 1450
+    email: blackberry-1450@example.com

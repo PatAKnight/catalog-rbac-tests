@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: peas_9_135
+  title: Peas 9 135
+spec:
+  children: []
+  parent: mushrooms_5_135
+  type: team

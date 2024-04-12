@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: papaya_1902
+spec:
+  memberOf:
+  - mushrooms_15_166
+  profile:
+    displayName: Papaya 1902
+    email: papaya-1902@example.com

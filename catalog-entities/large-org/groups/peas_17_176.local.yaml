@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: peas_17_176
+  title: Peas 17 176
+spec:
+  children: []
+  parent: shallots_15_176
+  type: team

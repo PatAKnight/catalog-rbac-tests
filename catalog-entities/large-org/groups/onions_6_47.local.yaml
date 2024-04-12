@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: onions_6_47
+  title: Onions 6 47
+spec:
+  children: []
+  parent: parsnips_0_47
+  type: team

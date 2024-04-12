@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: zucchinis_8_1
+  title: Zucchinis 8 1
+spec:
+  children: []
+  parent: pumpkins_0_1
+  type: team

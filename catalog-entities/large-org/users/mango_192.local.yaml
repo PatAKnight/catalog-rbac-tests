@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: mango_192
+spec:
+  memberOf:
+  - parsnips_1_225
+  profile:
+    displayName: Mango 192
+    email: mango-192@example.com

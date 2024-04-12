@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: potatoes_15_45
+  title: Potatoes 15 45
+spec:
+  children: []
+  parent: pumpkins_6_45
+  type: team

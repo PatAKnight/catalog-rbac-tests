@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: onions_16_176
+  title: Onions 16 176
+spec:
+  children: []
+  parent: peppers_4_176
+  type: team

@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: mushrooms_5_60
+  title: Mushrooms 5 60
+spec:
+  children: []
+  parent: parsnips_3_60
+  type: team

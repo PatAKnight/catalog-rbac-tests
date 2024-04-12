@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: onions_10_88
+  title: Onions 10 88
+spec:
+  children: []
+  parent: carrots_2_88
+  type: team

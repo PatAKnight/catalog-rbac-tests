@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: apple_1067
+spec:
+  memberOf:
+  - peas_0_173
+  profile:
+    displayName: Apple 1067
+    email: apple-1067@example.com

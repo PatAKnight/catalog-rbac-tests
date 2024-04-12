@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: peppers_9_84
+  title: Peppers 9 84
+spec:
+  children: []
+  parent: pumpkins_3_84
+  type: team

@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: mushrooms_15_110
+  title: Mushrooms 15 110
+spec:
+  children: []
+  parent: gourds_7_110
+  type: team

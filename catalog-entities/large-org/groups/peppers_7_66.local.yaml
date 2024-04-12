@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: peppers_7_66
+  title: Peppers 7 66
+spec:
+  children: []
+  parent: zucchinis_6_66
+  type: team

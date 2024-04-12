@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: shallots_8_245
+  title: Shallots 8 245
+spec:
+  children: []
+  parent: leeks_4_245
+  type: team

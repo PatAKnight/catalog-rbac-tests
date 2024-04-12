@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: shallots_1_25
+  title: Shallots 1 25
+spec:
+  children: []
+  parent: cucumbers_0_25
+  type: team

@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: peppers_19_100
+  title: Peppers 19 100
+spec:
+  children: []
+  parent: peppers_6_100
+  type: team

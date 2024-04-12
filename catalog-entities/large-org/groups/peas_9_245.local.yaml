@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: peas_9_245
+  title: Peas 9 245
+spec:
+  children: []
+  parent: pumpkins_5_245
+  type: team

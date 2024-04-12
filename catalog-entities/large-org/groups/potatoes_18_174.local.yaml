@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: potatoes_18_174
+  title: Potatoes 18 174
+spec:
+  children: []
+  parent: shallots_2_174
+  type: team

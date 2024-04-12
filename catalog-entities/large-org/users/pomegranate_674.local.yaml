@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: pomegranate_674
+spec:
+  memberOf:
+  - onions_8_136
+  profile:
+    displayName: Pomegranate 674
+    email: pomegranate-674@example.com

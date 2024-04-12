@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: peas_13_174
+  title: Peas 13 174
+spec:
+  children: []
+  parent: onions_8_174
+  type: team

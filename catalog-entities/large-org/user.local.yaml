@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: <YOUR_USER_NAME>
+spec:
+  memberOf:
+    - peas_6_0

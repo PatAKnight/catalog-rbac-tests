@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: onions_8_176
+  title: Onions 8 176
+spec:
+  children: []
+  parent: turnips_3_176
+  type: team

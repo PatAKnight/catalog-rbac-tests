@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: leeks_2_246
+  title: Leeks 2 246
+spec:
+  children: []
+  parent: mushrooms_0_246
+  type: team

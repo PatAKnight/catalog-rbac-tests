@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: parsnips_10_186
+  title: Parsnips 10 186
+spec:
+  children: []
+  parent: shallots_9_186
+  type: team
