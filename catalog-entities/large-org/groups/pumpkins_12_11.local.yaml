@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: pumpkins_12_11
-  title: Pumpkins 12 11
-spec:
-  children: []
-  parent: peas_0_11
-  type: team

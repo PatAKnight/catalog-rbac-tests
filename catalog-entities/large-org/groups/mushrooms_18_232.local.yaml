@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: mushrooms_18_232
-  title: Mushrooms 18 232
-spec:
-  children: []
-  parent: peas_6_232
-  type: team

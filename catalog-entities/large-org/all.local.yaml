@@ -5,6 +5,6 @@ metadata:
   description: A collection of all the catalog entities
 spec:
   targets:
-    - ./groups/groups.local.yaml
-    - ./users/users.local.yaml
-    - ./user.local.yaml
+    - ./base-user.local.yaml
+    - ./groups.local.yaml
+    - ./users.local.yaml

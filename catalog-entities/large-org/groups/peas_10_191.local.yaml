@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: peas_10_191
-  title: Peas 10 191
-spec:
-  children: []
-  parent: peas_1_191
-  type: team

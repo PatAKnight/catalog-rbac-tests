@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: mushrooms_8_9
-  title: Mushrooms 8 9
-spec:
-  children: []
-  parent: pumpkins_4_9
-  type: team

@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: onions_13_31
-  title: Onions 13 31
-spec:
-  children: []
-  parent: zucchinis_12_31
-  type: team

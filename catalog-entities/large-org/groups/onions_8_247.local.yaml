@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: onions_8_247
-  title: Onions 8 247
-spec:
-  children: []
-  parent: turnips_5_247
-  type: team

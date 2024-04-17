@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: shallots_16_226
-  title: Shallots 16 226
-spec:
-  children: []
-  parent: potatoes_2_226
-  type: team

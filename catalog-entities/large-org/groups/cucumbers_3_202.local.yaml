@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: cucumbers_3_202
-  title: Cucumbers 3 202
-spec:
-  children: []
-  parent: peppers_0_202
-  type: team

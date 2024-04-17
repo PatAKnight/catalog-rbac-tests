@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: onions_4_137
-  title: Onions 4 137
-spec:
-  children: []
-  parent: cucumbers_0_137
-  type: team

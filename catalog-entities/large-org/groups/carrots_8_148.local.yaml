@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: carrots_8_148
-  title: Carrots 8 148
-spec:
-  children: []
-  parent: peppers_2_148
-  type: team

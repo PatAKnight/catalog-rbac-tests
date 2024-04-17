@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: potatoes_5_194
-  title: Potatoes 5 194
-spec:
-  children: []
-  parent: parsnips_4_194
-  type: team

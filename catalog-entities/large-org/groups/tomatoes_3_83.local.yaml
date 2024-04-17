@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: tomatoes_3_83
-  title: Tomatoes 3 83
-spec:
-  children: []
-  parent: potatoes_0_83
-  type: team

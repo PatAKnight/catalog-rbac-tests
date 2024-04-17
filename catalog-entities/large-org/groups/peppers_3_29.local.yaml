@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: peppers_3_29
-  title: Peppers 3 29
-spec:
-  children: []
-  parent: tomatoes_1_29
-  type: team

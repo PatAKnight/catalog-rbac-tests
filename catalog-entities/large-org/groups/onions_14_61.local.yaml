@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: onions_14_61
-  title: Onions 14 61
-spec:
-  children: []
-  parent: pumpkins_5_61
-  type: team

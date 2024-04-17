@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: shallots_14_88
-  title: Shallots 14 88
-spec:
-  children: []
-  parent: parsnips_1_88
-  type: team

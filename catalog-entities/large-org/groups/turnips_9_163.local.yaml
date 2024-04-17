@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: turnips_9_163
-  title: Turnips 9 163
-spec:
-  children: []
-  parent: turnips_1_163
-  type: team

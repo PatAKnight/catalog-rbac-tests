@@ -1,8 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: onions_0_172
-  title: Onions 0 172
-spec:
-  children: []
-  type: team

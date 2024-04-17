@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: potatoes_4_149
-  title: Potatoes 4 149
-spec:
-  children: []
-  parent: mushrooms_1_149
-  type: team

@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: onions_10_147
-  title: Onions 10 147
-spec:
-  children: []
-  parent: leeks_3_147
-  type: team

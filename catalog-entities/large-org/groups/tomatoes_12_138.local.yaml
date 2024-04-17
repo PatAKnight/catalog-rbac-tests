@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: tomatoes_12_138
-  title: Tomatoes 12 138
-spec:
-  children: []
-  parent: leeks_8_138
-  type: team

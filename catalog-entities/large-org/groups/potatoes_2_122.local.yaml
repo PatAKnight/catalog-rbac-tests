@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: potatoes_2_122
-  title: Potatoes 2 122
-spec:
-  children: []
-  parent: mushrooms_0_122
-  type: team

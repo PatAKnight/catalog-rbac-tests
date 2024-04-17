@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: leeks_16_17
-  title: Leeks 16 17
-spec:
-  children: []
-  parent: parsnips_5_17
-  type: team

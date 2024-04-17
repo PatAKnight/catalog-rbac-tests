@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: onions_17_236
-  title: Onions 17 236
-spec:
-  children: []
-  parent: mushrooms_9_236
-  type: team

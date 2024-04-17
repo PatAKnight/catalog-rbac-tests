@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: gourds_2_125
-  title: Gourds 2 125
-spec:
-  children: []
-  parent: turnips_1_125
-  type: team

@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: parsnips_5_224
-  title: Parsnips 5 224
-spec:
-  children: []
-  parent: peppers_0_224
-  type: team

@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: tomatoes_11_0
-  title: Tomatoes 11 0
-spec:
-  children: []
-  parent: gourds_0_0
-  type: team

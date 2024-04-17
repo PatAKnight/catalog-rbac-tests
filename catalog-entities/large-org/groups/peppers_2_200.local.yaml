@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: peppers_2_200
-  title: Peppers 2 200
-spec:
-  children: []
-  parent: gourds_1_200
-  type: team

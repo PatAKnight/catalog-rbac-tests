@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: shallots_12_150
-  title: Shallots 12 150
-spec:
-  children: []
-  parent: leeks_4_150
-  type: team

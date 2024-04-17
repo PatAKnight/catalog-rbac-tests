@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: carrots_15_31
-  title: Carrots 15 31
-spec:
-  children: []
-  parent: onions_13_31
-  type: team

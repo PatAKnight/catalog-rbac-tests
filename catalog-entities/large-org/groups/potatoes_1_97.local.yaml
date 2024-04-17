@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: potatoes_1_97
-  title: Potatoes 1 97
-spec:
-  children: []
-  parent: pumpkins_0_97
-  type: team

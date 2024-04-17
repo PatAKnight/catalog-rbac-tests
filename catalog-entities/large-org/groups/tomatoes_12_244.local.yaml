@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: tomatoes_12_244
-  title: Tomatoes 12 244
-spec:
-  children: []
-  parent: carrots_10_244
-  type: team

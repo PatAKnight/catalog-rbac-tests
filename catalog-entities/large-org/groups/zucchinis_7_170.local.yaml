@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: zucchinis_7_170
-  title: Zucchinis 7 170
-spec:
-  children: []
-  parent: shallots_5_170
-  type: team

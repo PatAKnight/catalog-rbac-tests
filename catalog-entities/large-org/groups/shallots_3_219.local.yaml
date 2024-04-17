@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: shallots_3_219
-  title: Shallots 3 219
-spec:
-  children: []
-  parent: onions_2_219
-  type: team

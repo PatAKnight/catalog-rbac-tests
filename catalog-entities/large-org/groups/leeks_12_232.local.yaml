@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: leeks_12_232
-  title: Leeks 12 232
-spec:
-  children: []
-  parent: pumpkins_11_232
-  type: team

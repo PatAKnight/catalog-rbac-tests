@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: zucchinis_10_193
-  title: Zucchinis 10 193
-spec:
-  children: []
-  parent: parsnips_4_193
-  type: team

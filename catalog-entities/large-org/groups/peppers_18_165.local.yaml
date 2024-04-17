@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: peppers_18_165
-  title: Peppers 18 165
-spec:
-  children: []
-  parent: shallots_17_165
-  type: team

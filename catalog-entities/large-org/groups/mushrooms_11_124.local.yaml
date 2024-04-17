@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: mushrooms_11_124
-  title: Mushrooms 11 124
-spec:
-  children: []
-  parent: carrots_7_124
-  type: team

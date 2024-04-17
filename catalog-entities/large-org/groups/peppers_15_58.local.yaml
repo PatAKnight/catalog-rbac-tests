@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: peppers_15_58
-  title: Peppers 15 58
-spec:
-  children: []
-  parent: parsnips_4_58
-  type: team

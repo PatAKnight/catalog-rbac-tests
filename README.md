@@ -1,12 +1,23 @@
 # CATALOG-RBAC-TESTS
 
+## Using the tree graph builder
+
+```bash
+python tree.py -g 25 -u 2000 -r 250 -z 250
+```
+
+-g will be the number of groups
+
+- For the total number of groups to be generated multiple -g by -r
+
+-u the number of users
+
+- This is independent to the number of groups
+
+-r the number of root groups that you want
+-z the number of roles that you will want
+
 Search and replace `<YOUR_USER_NAME>` with your username
-
-Edit `./catalog-entities/all.local.yaml` to select the number of users and groups that you wish to load into your backstage instance
-
-Each user file has 13 users
-
-Each group file has 13 groups
 
 Add the following to your app-config
 
@@ -16,14 +27,14 @@ catalog:
   locations:
     # Local example template
     - type: file
-      target: ../../catalog-entities/all.local.yaml
+      target: ../../catalog-entities/large-org/all.local.yaml
       rules:
         - allow: [User, Group]
 ```
 
-Update the `rbac-policy.csv` to include the permissions and roles that you wish to load. Best to make a copy and then only add the permissions and roles that match the users and groups that you added above.
+An rbac policy file will be generated `rbac-policy.csv`
 
-It is setup in groups of four. So, the first four set of roles and permissions correspond to the first four user files and group files in `./catalog-entities/all.local.yaml`.
+Also, a simple text file will be generated to show the hierarchy of the graph
 
 Also included is `curl.py` which will allow you to make 10 groups of 15 calls to the catalog.
 

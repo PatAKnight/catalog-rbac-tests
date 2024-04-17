@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: gourds_5_108
-  title: Gourds 5 108
-spec:
-  children: []
-  parent: pumpkins_2_108
-  type: team

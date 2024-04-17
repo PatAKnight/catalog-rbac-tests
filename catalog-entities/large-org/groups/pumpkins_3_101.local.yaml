@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: pumpkins_3_101
-  title: Pumpkins 3 101
-spec:
-  children: []
-  parent: carrots_0_101
-  type: team

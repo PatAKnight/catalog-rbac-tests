@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: peppers_4_124
-  title: Peppers 4 124
-spec:
-  children: []
-  parent: peas_3_124
-  type: team

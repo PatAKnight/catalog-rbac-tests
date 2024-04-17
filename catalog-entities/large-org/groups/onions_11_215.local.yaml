@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: onions_11_215
-  title: Onions 11 215
-spec:
-  children: []
-  parent: leeks_4_215
-  type: team

@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: shallots_4_132
-  title: Shallots 4 132
-spec:
-  children: []
-  parent: mushrooms_1_132
-  type: team

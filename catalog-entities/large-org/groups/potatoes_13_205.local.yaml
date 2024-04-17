@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: potatoes_13_205
-  title: Potatoes 13 205
-spec:
-  children: []
-  parent: zucchinis_7_205
-  type: team

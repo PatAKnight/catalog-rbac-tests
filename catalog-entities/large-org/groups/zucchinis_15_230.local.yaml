@@ -1,9 +1,0 @@
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: zucchinis_15_230
-  title: Zucchinis 15 230
-spec:
-  children: []
-  parent: peas_6_230
-  type: team
