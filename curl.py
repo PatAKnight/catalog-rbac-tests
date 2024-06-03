@@ -3,7 +3,7 @@ import requests
 import time
 import os
 
-AUTH_TOKEN = os.environ.get('TOKEN')
+AUTH_TOKEN = os.environ.get('token')
 
 ENDPOINT_URL = "http://localhost:7007/api/permission/authorize"
 NUM_REQUESTS = 15
@@ -41,5 +41,7 @@ for i in range(NUM_REQUESTS_TWO):
     total_time += total_time_inner
 
 average_time = total_time / NUM_REQUESTS_TWO
+average_time_single_request = total_time / NUM_REQUESTS_TWO / NUM_REQUESTS
+print(f"Average time taken for a single request: {average_time_single_request:.3f} seconds")
 print(f"Average time taken for {NUM_REQUESTS} requests over {NUM_REQUESTS_TWO} iterations: {average_time:.3f} seconds")
 print(f"Total time taken for {NUM_REQUESTS} requests of {NUM_REQUESTS_TWO} iterations: {total_time:.3f} seconds")

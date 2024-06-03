@@ -1,0 +1,6 @@
+# Local catalog entities
+*.local.yaml
+# Generated csv file
+*.csv
+# Generated group hierarchy tree
+*.txt
