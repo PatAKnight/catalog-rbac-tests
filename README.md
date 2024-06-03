@@ -39,7 +39,7 @@ Also, a simple text file will be generated to show the hierarchy of the graph
 Also included is `curl.py` which will allow you to make 10 groups of 15 calls to the catalog.
 
 ```bash
-export TOKEN=your-token
+export token=your-token
 python curl.py
 ```
 
