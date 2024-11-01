@@ -93,3 +93,41 @@ python hierarchy.py -r 10 -g 5 -u 10 -l 5
 - The number of users: 1600
 - The number of roles: 160
 - The number of permissions: 640
+
+```bash
+python hierarchy.py -r 10 -g 9 -u 10 -l 8
+```
+
+- The number of groups: 5110
+- The number of users: 25600
+- The number of roles: 1280
+- The number of permissions: 5120
+
+```bash
+python hierarchy.py -r 10 -g 9 -u 10 -l 4
+```
+
+- The number of groups: 5110
+- The number of users: 25600
+- The number of roles: 80
+- The number of permissions: 320
+
+### Performance test
+
+Now included is a performance script that runs async calls to both the Catalog API and Permission API endpoints.
+
+To be able to use this script, update:
+
+- `LIST_OF_USERS` to include the user(s) that you wish to test with
+- `TOKENS` to include the Bearer tokens said user(s)
+- `EXPECTED_RESULT` to include the expected result of the Permission API for said user(s)
+
+then you can run the script using:
+
+```bash
+python performance.py
+```
+
+The test will run 5 times for each user and endpoint and will make 10 requests to each endpoint for the specified user.
+
+You can also update `NUM_REQUESTS` to specify the number of API calls and `NUM_REQUESTS_TWO` to specify how many attempts need to be completed.
