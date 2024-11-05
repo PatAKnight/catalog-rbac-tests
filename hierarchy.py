@@ -83,7 +83,7 @@ def generate_user_yaml_content(name, number, group, group_number):
   memberOf = group
   if number > -1:
     username = f"{name.lower()}_{number}_{group_number}"
-    email = f"{name.lower()}-{number}-{group_number}@example.com"
+    email = f"{name.lower()}_{number}_{group_number}@example.com"
     displayName = f"{name.capitalize()} {number} {group_number}"
   else:
     username = name
