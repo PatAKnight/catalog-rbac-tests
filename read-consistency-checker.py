@@ -1,16 +1,25 @@
-# The idea of this script is to check the consistancy of the read data, since we created new role.
-# Also we check delay of the response. 
-# This scripts allows to make a lot of parallel read requests to make small dos attack to the API and make
-#  sure backend can handle a lot of requests without failing.
-# In the newer rbac-backend we will try have in sync data beetwen few pod replicase, 
-# we need to make sure that read operations are consistent and stable even with large amount of requests.
+# The purpose of this script is to check the consistency of read data since we created a new role.
+# It also checks the response delay.
+# This script allows making a large number of parallel read requests to simulate a small DoS attack on the API
+# and ensures the backend can handle a high volume of requests without failing.
+# In the newer RBAC backend, we will try to keep data in sync between several pod replicas.
+# We need to ensure that read operations are consistent and stable, even with a large number of requests.
 #
 # Prerequisites:
 # RHDH deployed on OpenShift with replicas > 1
-# Route contains annotation "haproxy.router.openshift.io/balance": "roundrobin"
+# The route should contain the annotation "haproxy.router.openshift.io/balance": "roundrobin"
+# You may also need to provide a higher limit for maximum PostgreSQL connections. You can do this inside the pod:
+# $ psql -h 127.0.0.1 -p 5432 -U postgres
+# To provide more connections:
+# ALTER SYSTEM SET max_connections = 200;
+# Restart the PostgreSQL StatefulSet. You can rescale it to 0 and then back to 1.
+# To check the current limit:
+# $ psql -h 127.0.0.1 -p 5432 -U postgres
+# $ SHOW max_connections;
 #
-# Example, how to run: 
-# python3 read-consistancy-checker.py > ~/log-fix-1000-request-10iterations.txt 2>&1
+# Example of how to run the script: 
+# python3 read-consistency-checker.py > ~/log-fix-1000-request-10iterations.txt 2>&1
+
 
 import traceback
 import asyncio
