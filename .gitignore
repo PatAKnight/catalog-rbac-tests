@@ -1,6 +1,20 @@
 # Local catalog entities
 *.local.yaml
+
 # Generated csv file
 *.csv
+
 # Generated group hierarchy tree
-*.txt
+catalog-entities/*/**.txt
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Misc data files
+data/
+
+# Any log files
+*.log
