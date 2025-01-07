@@ -14,30 +14,56 @@ from keycloak import KeycloakAdmin
 import warnings
 from urllib3.exceptions import InsecureRequestWarning
 from typing import List
+import asyncio
+import os
 
 # Suppress only InsecureRequestWarnings
 warnings.simplefilter('ignore', InsecureRequestWarning)
 
 # Keycloak Admin setup
-admin_url = "http://localhost:8080/"
-admin_username = "admin"
-admin_password = "admin"
+admin_url = os.getenv("ADMIN_URL", "http://localhost:8080/").strip()
+admin_username = os.getenv("ADMIN_USERNAME", "admin").strip()
+admin_password = os.getenv("ADMIN_PASSWORD", "admin").strip()
 
 # Realms
 realms = [
-    "realm-a",
-    # "realm-b",
+    # "realm-a",
+    "realm-b",
     # "realm-c",
     # "realm-d"
 ]
 
-group_count = 10
-user_count = 30
+group_count_str = os.getenv("GROUP_COUNT", "1000").strip()
+# Try to convert to an integer
+try:
+    group_count = int(group_count_str)
+except ValueError:
+    # If the conversion fails, set a default value
+    print(f"Invalid value for GROUP_COUNT: {group_count_str}. Using default value '1000'.")
+    group_count = 1000
+
+user_count_str = os.getenv("USER_COUNT", "500000").strip()
+# Try to convert to an integer
+try:
+    user_count = int(user_count_str)
+except ValueError:
+    # If the conversion fails, set a default value
+    print(f"Invalid value for USER_COUNT: {user_count_str}. Using default value '500000'.")
+    user_count = 500000
+
+# Get the environment variable, default to '100' if not set
+concurrency_tasks_str = os.getenv("CONCURRENCY_TASKS", "100").strip()
+# Try to convert to an integer
+try:
+    concurrency_tasks = int(concurrency_tasks_str)
+except ValueError:
+    # If the conversion fails, set a default value
+    print(f"Invalid value for CONCURRENCY_TASKS: {concurrency_tasks_str}. Using default value '100'.")
+    concurrency_tasks = 100
+
 sub_group_depth = 2  # Define depth of sub-groups
 sub_groups_per_group = 3  # Number of sub-groups per group
 cyclic_group_count = 5  # Number of groups to include in the cyclic structure for RealmD
-
-group_ids = []
 
 # Client settings
 client_spec = {
@@ -74,37 +100,6 @@ def create_realm(keycloak_admin: KeycloakAdmin, realm_name: str):
         print(f"Realm {realm_name} created.")
     except Exception as e:
         print(f"Realm {realm_name} creation failed: {e}")
-
-def create_groups(realm_admin: KeycloakAdmin, count: int):
-    """Create groups in a realm."""
-    for i in range(count):
-        group_name = f"group-{i+1}"
-        try:
-            group_ids.append(realm_admin.create_group({"name": group_name,}))
-            # print(f"Created group: {group_name}")
-        except Exception as e:
-            print(f"Group creation failed for {group_name}: {e}")
-
-def create_users(realm_admin: KeycloakAdmin, count: int, group_assignment):
-    """Create users and assign to groups."""
-    for i in range(count):
-        username = f"user-{i+1}"
-        try:
-            realm_admin.create_user({"username": username, "enabled": True})
-            user_id = realm_admin.get_user_id(username)
-            # print(f"Created user: {username}")
-            
-            # Assign groups
-            groups = group_assignment(user_id, group_ids, i)
-            for group_id in groups:
-                realm_admin.group_user_add(user_id, group_id)
-                # print(f"Assigned {username} to group-{group_ids.index(group_id)+1}")
-
-            user = realm_admin.get_user(user_id)
-            print(user)
-            # realm_admin.create_user({"username": username, "enabled": True, "groups": groups})
-        except Exception as e:
-            print(f"User creation failed for {username}: {e}")
 
 def create_client(realm_admin: KeycloakAdmin, realm_name: str, spec):
     """Create a client for a realm."""
@@ -151,7 +146,7 @@ def assign_three_groups_evenly(user_id: str, group_ids: List[str], user_index: i
     return group_ids[start:start+3]
 
 # Updated helper functions
-def create_groups_with_subgroups(realm_admin: KeycloakAdmin, count: int, create_subgroups=False, depth=1):
+def create_groups_with_subgroups(realm_admin: KeycloakAdmin, count: int, group_ids: List[str], create_subgroups=False, depth=1):
     """Create groups in a realm, optionally with sub-groups."""
     for i in range(count):
         group_name = f"group-{i+1}"
@@ -207,29 +202,87 @@ def create_cyclic_groups(realm_admin: KeycloakAdmin, count: int):
                 print(f'here is the last group to be created {group_id}')
         except Exception as e:
             print(f"Cyclic group creation failed for {group_name}: {e}")
+
+async def create_user_task(realm_admin: KeycloakAdmin, username: str, group_ids, group_assignment, user_index):
+    """Asynchronous user creation and group assignment."""
+    try:
+        await asyncio.to_thread(realm_admin.create_user, {"username": username, "enabled": True})
+        user_id = await asyncio.to_thread(realm_admin.get_user_id, username)
+
+        # Assign groups
+        groups = group_assignment(user_id, group_ids, user_index)
+        for group_id in groups:
+            await asyncio.to_thread(realm_admin.group_user_add, user_id, group_id)
+
+        return f"User {username} created and assigned to groups."
+    except Exception as e:
+        return f"User creation failed for {username}: {e}"
+
+async def create_users_async(realm_admin: KeycloakAdmin, count: int, group_assignment, group_ids, max_concurrent_tasks=10):
+    """Asynchronous user creation."""
+    semaphore = asyncio.Semaphore(max_concurrent_tasks)
+
+    async def sem_task(i):
+        username = f"user-{i+1}"
+        async with semaphore:
+            return await create_user_task(realm_admin, username, group_ids, group_assignment, i)
+
+    tasks = [sem_task(i) for i in range(count)]
+    for result in await asyncio.gather(*tasks):
+        print(result)
+
+async def create_group_task(realm_admin: KeycloakAdmin, group_name: str):
+    """Asynchronous group creation."""
+    try:
+        group_id = await asyncio.to_thread(realm_admin.create_group, {"name": group_name})
+        return group_id, f"Group {group_name} created."
+    except Exception as e:
+        return None, f"Group creation failed for {group_name}: {e}"
+
+async def create_groups_async(realm_admin: KeycloakAdmin, count: int, group_ids, max_concurrent_tasks=10):
+    """Asynchronous group creation."""
+    semaphore = asyncio.Semaphore(max_concurrent_tasks)
+
+    async def sem_task(i):
+        group_name = f"group-{i+1}"
+        async with semaphore:
+            return await create_group_task(realm_admin, group_name)
+
+    tasks = [sem_task(i) for i in range(count)]
+    for group_id, result in await asyncio.gather(*tasks):
+        if group_id:
+            group_ids.append(group_id)
+        print(result)
     
-# Execution
-if __name__ == "__main__":
+async def main():
+    group_ids = []
     for realm in realms:
         keycloak_admin = init_keycloak_admin('master')
 
+        # Create realm
         create_realm(keycloak_admin, realm)
         realm_admin = init_keycloak_admin(realm)
-        # Different logic for each realm
+
+        # Create client
+        create_client(realm_admin, realm, client_spec)
+
+        # Create groups and users
         if realm == "realm-a":
-            create_groups(realm_admin, group_count)
-            create_users(realm_admin, user_count, assign_all_groups)
-        # elif realm == "realm-b":
-        #     create_groups(realm_admin, group_count)
-        #     create_users(realm_admin, user_count, assign_three_groups_evenly)
+            await create_groups_async(realm_admin, group_count, group_ids, concurrency_tasks)
+            await create_users_async(realm_admin, user_count, assign_all_groups, group_ids, concurrency_tasks)
+        elif realm == "realm-b":
+            await create_groups_async(realm_admin, group_count, group_ids, concurrency_tasks)
+            await create_users_async(realm_admin, user_count, assign_three_groups_evenly, group_ids, concurrency_tasks)
         # elif realm == "realm-c":
         #     create_groups_with_subgroups(
-        #         realm_admin, group_count, create_subgroups=True, depth=sub_group_depth
+        #         realm_admin, group_count, group_ids, create_subgroups=True, depth=sub_group_depth
         #     )
         # elif realm == "realm-d":
         #     # Create cyclic groups
         #     create_cyclic_groups(realm_admin, cyclic_group_count)
         #     # Create the remaining normal groups
-        #     create_groups(realm_admin, group_count - cyclic_group_count)
+        #     await create_groups_async(realm_admin, group_count - cyclic_group_count, group_ids)
 
-        create_client(realm_admin, realm, client_spec)
+# Execution
+if __name__ == "__main__":
+    asyncio.run(main())
