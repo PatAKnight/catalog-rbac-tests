@@ -30,7 +30,7 @@ import argparse
 import sys
 
 BASE_URL = "<base backstage url>"
-DEFAULT_NUM_REQUESTS = 100
+DEFAULT_NUM_REQUESTS = 1000
 NUM_ITERATIONS = 10
 
 ADMIN_TOKEN = "<your_admin_token_here>"
