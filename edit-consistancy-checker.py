@@ -16,11 +16,12 @@ class BackstageClient:
         self.ssl_context.verify_mode = ssl.CERT_NONE
         self.successful_read_requests = 0
         self.counter_lock = asyncio.Lock()
+        self.timeout = aiohttp.ClientTimeout(total=60)
 
     async def create_permission(self, permission):
         endpoint = f"{self.base_url}/api/permission/policies"
         print(f"Create permission: {permission}")
-        async with aiohttp.ClientSession() as session:
+        async with aiohttp.ClientSession(timeout=self.timeout) as session:
             try:
                 async with session.post(
                     endpoint,
@@ -44,7 +45,7 @@ class BackstageClient:
     async def update_permissions(self, role, old_permissions: List, new_permissions: List):
         endpoint = f"{self.base_url}/api/permission/policies/{role.replace(':', '/')}"
         print(f"Update permissions: {new_permissions}")
-        async with aiohttp.ClientSession() as session:
+        async with aiohttp.ClientSession(timeout=self.timeout) as session:
             try:
                 async with session.put(
                     endpoint,
@@ -68,7 +69,7 @@ class BackstageClient:
     async def delete_permission(self, role, permission):
         endpoint = f"{self.base_url}/api/permission/policies/{role.replace(':', '/')}"
         print(f"Delete permission: {permission}")
-        async with aiohttp.ClientSession() as session:
+        async with aiohttp.ClientSession(timeout=self.timeout) as session:
             try:
                 async with session.delete(
                     endpoint,
@@ -84,13 +85,14 @@ class BackstageClient:
                         sys.exit(1)
                     if response.status != 204:
                         raise ValueError(f"Unexpected error. Status code is {response.status}.")
+                    print(f"Permission was deleted: {permission}")
             except asyncio.TimeoutError:
                 print(f"Request timed out while deleting permission: {permission}")
 
     async def create_role(self, role, role_content):
         endpoint = f"{self.base_url}/api/permission/roles"
         print(f"Create role: {role}")
-        async with aiohttp.ClientSession() as session:
+        async with aiohttp.ClientSession(timeout=self.timeout) as session:
             try:
                 async with session.post(
                     endpoint,
@@ -113,7 +115,7 @@ class BackstageClient:
     async def update_role(self, role, oldRole, newRole):
         endpoint = f"{self.base_url}/api/permission/roles/{role.replace(':', '/')}"
         print(f"Update role: {role}")
-        async with aiohttp.ClientSession() as session:
+        async with aiohttp.ClientSession(timeout=self.timeout) as session:
             try:
                 async with session.put(
                     endpoint,
@@ -136,7 +138,7 @@ class BackstageClient:
     async def delete_role(self, role):
         endpoint = f"{self.base_url}/api/permission/roles/{role.replace(':', '/')}"
         print(f"Delete role: {role}")
-        async with aiohttp.ClientSession() as session:
+        async with aiohttp.ClientSession(timeout=self.timeout) as session:
             try:
                 async with session.delete(
                     endpoint,
@@ -159,7 +161,7 @@ class BackstageClient:
         endpoint = f"{self.base_url}/api/permission/roles/{role.replace(':', '/')}"
         iteration_info = f"Iteration number was {iteration}" if iteration is not None else ""
         print(f"{endpoint} {iteration_info}")
-        async with aiohttp.ClientSession() as session:
+        async with aiohttp.ClientSession(timeout=self.timeout) as session:
             try:
                 start_time = time.time()
                 async with session.get(
@@ -238,7 +240,7 @@ async def update_permissions(client: BackstageClient, start, end):
     await asyncio.gather(*tasks)
 
 def main():
-    base_url = "http://localhost:7007"
+    base_url = ">rhdh-with-few-replicas-uri<"
     admin_token = ">admin-token<"
 
     client = BackstageClient(base_url, admin_token)
@@ -252,13 +254,11 @@ def main():
         tasks = []
         for start, end in workloads:
             tasks.append(create_roles(client, start, end))
-            # await create_roles(client, start, end)
         await asyncio.gather(*tasks)
 
         tasks.clear()
         for start, end in workloads:
             tasks.append(create_permissions(client, start, end))
-            # await create_permissions(client, start, end)
         await asyncio.gather(*tasks)
 
         tasks.clear()
@@ -273,14 +273,6 @@ def main():
             permission = '[{"entityReference": "' + role_name + '", "permission": "catalog-entity", "policy": "read", "effect":"allow"}]'
             tasks.append(client.delete_role(role_name))
             tasks.append(client.delete_permission(role_name, permission))
-            try:
-                await client.delete_role(role_name)
-            except:
-                print("Error")
-            try:
-                await client.delete_permission(role_name, permission)
-            except:
-                print("Error")
 
         await asyncio.gather(*tasks)
 
