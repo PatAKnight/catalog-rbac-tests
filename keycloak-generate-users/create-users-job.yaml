@@ -1,0 +1,32 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: keycloak-script-job
+  namespace: keycloak
+  labels:
+    app: keycloak-script
+spec:
+  template:
+    metadata:
+      labels:
+        app: keycloak-script
+    spec:
+      containers:
+      - name: keycloak-script
+        image: quay.io/aandriienko/keycloak-script:1
+        imagePullPolicy: Always
+        command: ["python"]
+        args: ["generate-users-and-group.py"]
+        env:
+        - name: ADMIN_URL
+          value: "https://keycloak.<domain-is-here>/"
+        - name: USER_COUNT
+          value: "50000"
+        - name: ADMIN_USERNAME
+          value: "admin"
+        - name: ADMIN_PASSWORD
+          value: "<admin-password>"
+        - name: CONCURRENCY_TASKS
+          value: "100"
+      restartPolicy: Never
+  backoffLimit: 4
