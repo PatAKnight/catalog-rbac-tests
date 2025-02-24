@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  haproxy:
+    image: haproxy:latest
+    container_name: haproxy_proxy
+    ports:
+      - "8080:8080"  # Proxy listen to  8080
+    volumes:
+      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
