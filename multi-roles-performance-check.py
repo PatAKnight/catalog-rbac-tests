@@ -11,7 +11,7 @@ import argparse
 import sys
 
 USER="user:default/cyber-stalker-bit"
-BASE_URL = "http://localhost:7007"
+BASE_URL = "<base_url_here>"  # Replace with your actual base URL
 DEFAULT_NUM_REQUESTS = 1000
 NUM_ROLES = 50
 
