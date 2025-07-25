@@ -84,7 +84,7 @@ class BackstageClient:
                         print("ERROR: Update token for user!")
                         sys.exit(1)
                     if response.status != 204:
-                        raise ValueError(f"Unexpected error. Status code is {response.status}.")
+                        raise ValueError(f"Unexpected error for delete permission {permission}. Status code is {response.status}.")
                     print(f"Permission was deleted: {permission}")
             except asyncio.TimeoutError:
                 print(f"Request timed out while deleting permission: {permission}")
